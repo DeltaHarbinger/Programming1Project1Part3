@@ -1,0 +1,1 @@
+initialized booking number as 0, increments right before printing in the end.
