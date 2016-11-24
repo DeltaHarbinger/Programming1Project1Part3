@@ -152,6 +152,18 @@ int main() {
 						puts(studIDarr[x]);
 						printf("Deposit made: $%.2f\n", depositarr[x]);
 						printf("Balance remaining for confirmation $%.2f\n", balancearr[x]);
+						printf("Destination Code: %c\n", destcodearr[x]);
+						printf("Destination Name: ");
+						switch (destcodearr[x]) {
+						case 'J':
+							puts("Jollygood Park\n");
+							break;
+						case 'M':
+							puts("Mum's River\n");
+							break;
+						case 'A':
+							puts("Adventurama\n");
+						}
 
 
 					}
@@ -205,7 +217,7 @@ int main() {
 					totaloutstanding -= deposit;
 					totaldeposit += deposit;
 					if (balancearr[x] <= 0) {
-						printf("\nThe booking has been confirmed.\n");//
+						printf("\nThe booking has been confirmed.\n");
 					}
 					else {
 						printf("\n$%0.2f is needed to confirm the booking.\n", balancearr[x]);
@@ -217,13 +229,15 @@ int main() {
 						totaloutstanding -= balancearr[x];
 						balancearr[x] = 0;
 					}
+					system("pause");
 				}
 				else {
 					printf("\nThe booking could not be found!\n");
+					system("pause");
 				}
 
 			}
-			system("pause");
+			
 			system("cls");
 			printf("=============================================================================\n");
 			printf("\t\t\tMain menu\n");
